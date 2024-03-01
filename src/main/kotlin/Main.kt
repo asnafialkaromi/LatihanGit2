@@ -1,3 +1,36 @@
+class Circle{
+    val phi : Double = 3.14
+    var r : Double = 0.0
+
+    private fun circleArea(): Double {
+        return phi* r * r
+    }
+
+    private fun circumference(): Double {
+        return 2 * phi * r
+    }
+
+    private fun inputUser(){
+        print("Masukkan Jari-Jari Lingkaran (cm): ")
+        r = readln().toDouble()
+    }
+
+    fun run(){
+        inputUser()
+        print("Luas Lingkaran: ")
+        println(circleArea())
+        print("Keliling Lingkaran: ")
+        println(circumference())
+    }
+
+    companion object{
+        @JvmStatic
+        fun main(args: Array<String>) {
+            Circle().run()
+        }
+    }
+}
+
 class Triangle {
     private var alasSegitiga : Double = -1.0
     private var tinggiSegitiga : Double = -1.0
